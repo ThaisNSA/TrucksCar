@@ -4,12 +4,12 @@ import dados.entidades.Cliente;
 import javax.persistence.EntityManager;
 import util.JPAUtil;
 
-public class AtorDAO {
+public class ClienteDAO {
     
     /**
-     * Salvar o ator no BD
+     * Salvar o cliente no BD
      */
-    public void salvar(Cliente a){
+    public void salvar(Cliente c){
         
         //Pegando o gerenciador de acesso ao BD
         EntityManager gerenciador = JPAUtil.getGerenciador();
@@ -17,8 +17,8 @@ public class AtorDAO {
         //Iniciar a transação
         gerenciador.getTransaction().begin();
         
-        //Mandar persistir o ator
-        gerenciador.persist(a);
+        //Mandar persistir o cliente
+        gerenciador.persist(c);
         
         //Commit
         gerenciador.getTransaction().commit();

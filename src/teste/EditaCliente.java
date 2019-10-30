@@ -4,18 +4,18 @@ import dados.entidades.Cliente;
 import javax.persistence.EntityManager;
 import util.JPAUtil;
 
-public class EditaAtor {
+public class EditaCliente {
     
     public static void main(String[] args) {
         
         //Pegando o gerenciador de acesso ao BD
         EntityManager gerenciador = JPAUtil.getGerenciador();
         
-        //Buscando um ator pelo id (segundo parametro)
-        Cliente a = gerenciador.find(Cliente.class, 1);
+        //Buscando um cliente pelo id (segundo parametro)
+        Cliente c = gerenciador.find(Cliente.class, 1);
         
         //Editando o nome (colocando um novo nome)
-        a.setNome("Samuel Santana");
+        c.setNome("Jonas");
         
         //Iniciar a transação
         gerenciador.getTransaction().begin();

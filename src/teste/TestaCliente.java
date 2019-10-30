@@ -8,7 +8,7 @@ public class TestaCliente {
     
     public static void main(String[] args) {
         
-        //Criando um objeto ator
+        //Criando um objeto cliente
         Cliente c1 = new Cliente();
         c1.setNome("Luiz");
         c1.setCpf("00000000000");

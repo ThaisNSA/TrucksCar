@@ -11,16 +11,16 @@ public class BuscaAutomovelCliente {
         //Pegando o gerenciador de acesso ao BD
         EntityManager gerenciador = JPAUtil.getGerenciador();
         
-        //Bucar o filme de id 1
+        //Bucar o automovel de id 1
         Automovel a = gerenciador.find(Automovel.class, 1);
         
-        //Imprimir o nome do Filme
+        //Imprimir o nome do automovel
         System.out.println("Automovel: " + a.getPorteDoAutomovel());
         
-        //Imprimir o genero
+        //Imprimir o serviço
         System.out.println("Servicos: " + a.getServicos().getTiposDeLavagem());
         
-        //Imprimindo o nome dos atores desse filme
+        //Imprimindo o nome do dono do automovel
         for(Cliente c : a.getClientes()){
             System.out.println("Cliente: " + c.getNome());
         }

@@ -11,10 +11,10 @@ public class BuscaCliente {
         //Pegando o gerenciador de acesso ao BD
         EntityManager gerenciador = JPAUtil.getGerenciador();
         
-        //Buscando um ator pelo id (segundo parametro)
+        //Buscando um cliente pelo id 
         Cliente c = gerenciador.find(Cliente.class, 1);
         
-        //Imprimindo o nome do ator
+        //Imprimindo o nome do cliente
         System.out.println("Nome: " + c.getNome());
         
         //Fechar o gerenciador

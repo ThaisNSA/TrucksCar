@@ -8,15 +8,16 @@ public class TestaAutomovel {
     
     public static void main(String[] args) {
         
-        //Criando um objeto ator
+        //Criando um objeto cliente
         Automovel a1 = new Automovel();
         a1.setPorteDoAutomovel("Medio");
-      a1.setCliente("Luis");
-       a1.setServicos("Ducha");
+        a1.setCliente("Luis");
+        a1.setServicos("Ducha");
         Automovel a2 = new Automovel();
         a2.setPorteDoAutomovel("Grande");
-       a2.setCliente("Juliano");
-       a2.setServicos("Ducha completa");
+        a2.setCliente("Juliano");
+        a2.setServicos("Ducha completa");
+        
       //Pegando o gerenciador de acesso ao BD
         EntityManager gerenciador = JPAUtil.getGerenciador();
         

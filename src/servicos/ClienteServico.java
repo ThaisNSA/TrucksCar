@@ -1,19 +1,19 @@
 package servicos;
 
-import dados.daos.AtorDAO;
+import dados.daos.ClienteDAO;
 import dados.entidades.Cliente;
 
-public class AtorServico {
+public class ClienteServico {
     
     //Atributo para representar a camada de dados
-    private AtorDAO dao = new AtorDAO();
+    private ClienteDAO dao = new ClienteDAO();
     
-    public void salvar(Cliente a){
+    public void salvar(Cliente c){
         //Fazer qualquer regra de negócio
         
-        //Mandar o ator para a camada de dados
+        //Mandar o cliente para a camada de dados
         //para ser salvo no banco de dados
-        dao.salvar(a);
+        dao.salvar(c);
     }    
     
 }

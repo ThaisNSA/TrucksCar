@@ -1,4 +1,4 @@
-package ui.ator;
+package ui.cliente;
 
 import com.jfoenix.controls.JFXTextField;
 import dados.entidades.Cliente;
@@ -8,7 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
-import servicos.AtorServico;
+import servicos.ClienteServico;
 
 /**
  * FXML Controller class
@@ -24,7 +24,7 @@ public class JanelaAtorController implements Initializable {
     private JFXTextField textFieldNome;
     
     //Atributo para representar o servico
-    private AtorServico servico = new AtorServico();
+    private ClienteServico servico = new ClienteServico();
     
 
     /**

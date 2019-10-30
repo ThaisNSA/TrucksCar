@@ -10,14 +10,15 @@ import javax.persistence.Id;
 public class Cliente {
 
     private String nome;
-
+    private String email;
+    private int telefone;
+    private String endereco;
+            
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_cadastro;
     private String cpf;
     private String cnpj;
-    private String email;
-    private int telefone;
     
     //Construtor vazio da JPA (OBRIGATÓRIO)
     public Cliente(){}
@@ -73,6 +74,14 @@ public class Cliente {
 
     public void setTelefone(int telefone) {
         this.telefone = telefone;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(String endereço) {
+        this.endereco = endereço;
     }
 
     @Override

@@ -4,7 +4,7 @@ import dados.entidades.Cliente;
 import javax.persistence.EntityManager;
 import util.JPAUtil;
 
-public class TestaRemoverAtor {
+public class TestaRemoverCliente {
     
     public static void main(String[] args) {
         
@@ -17,7 +17,7 @@ public class TestaRemoverAtor {
         //Iniciar a transação
         gerenciador.getTransaction().begin();
         
-        //Remover o ator
+        //Remover o cliente
         gerenciador.remove(c);
         
         //Commit na transação

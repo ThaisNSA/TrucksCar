@@ -15,7 +15,7 @@ import servicos.ClienteServico;
  *
  * @author lusst
  */
-public class JanelaAtorController implements Initializable {
+public class JanelaClienteController implements Initializable {
 
     @FXML
     private JFXTextField textFieldId;
@@ -39,11 +39,11 @@ public class JanelaAtorController implements Initializable {
     private void salvar(ActionEvent event) {
         
         //Pega os dados do fomulário
-        //e cria um objeto ator
-        Cliente a = new Cliente(textFieldNome.getText());
+        //e cria um objeto cliente
+        Cliente c = new Cliente(textFieldNome.getText());
         
         //Mandar o ator para a camada de servico
-        servico.salvar(a);
+        servico.salvar(c);
         //Exibindo mensagem
         mensagemSucesso("Ator salvo com sucesso!");
         //Limpando o form

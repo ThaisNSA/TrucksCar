@@ -2,6 +2,7 @@ package servicos;
 
 import dados.daos.ClienteDAO;
 import dados.entidades.Cliente;
+import java.util.List;
 
 public class ClienteServico {
     
@@ -15,5 +16,11 @@ public class ClienteServico {
         //para ser salvo no banco de dados
         dao.salvar(c);
     }    
-    
+     public List<Cliente> listar(){
+        
+        //Qualquer regra de negócio (se aplicável)
+        
+        //Pedir a DAO para listar e retornar
+        return dao.listar();
+}
 }

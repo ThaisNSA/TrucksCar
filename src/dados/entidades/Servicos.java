@@ -12,7 +12,7 @@ public class Servicos {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_Servicos; 
-   private String tiposDeLavagem;
+    private String tiposDeLavagem;
 
     public Integer getId_Servicos() {
         return id_Servicos;

@@ -4,11 +4,11 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="ui.ator.JanelaAtorController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.ator.JanelaAtorController">
    <children>
-      <JFXTextField fx:id="textFieldId" editable="false" labelFloat="true" layoutX="22.0" layoutY="16.0" prefHeight="31.0" prefWidth="69.0" promptText="Id" />
-      <JFXTextField fx:id="textFieldNome" labelFloat="true" layoutX="18.0" layoutY="81.0" prefHeight="31.0" prefWidth="564.0" promptText="Nome" />
-      <JFXButton layoutX="522.0" layoutY="129.0" onAction="#salvar" text="Salvar" />
+      <JFXTextField fx:id="textFieldId" editable="false" labelFloat="true" layoutX="18.0" layoutY="47.0" prefHeight="31.0" prefWidth="69.0" promptText="Id" />
+      <JFXTextField fx:id="textFieldNome" labelFloat="true" layoutX="18.0" layoutY="93.0" prefHeight="31.0" prefWidth="564.0" promptText="Nome" />
+      <JFXButton layoutX="524.0" layoutY="354.0" onAction="#salvar" text="Salvar" />
+      <JFXTextField fx:id="textFieldCpfCnpj" labelFloat="true" layoutX="18.0" layoutY="151.0" prefHeight="31.0" prefWidth="564.0" promptText="CPF/CNPJ" />
    </children>
 </AnchorPane>

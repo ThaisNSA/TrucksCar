@@ -8,10 +8,68 @@ import util.JPAUtil;
 
 public class ClienteDAO {
     
-    /**
-     * Salvar o cliente no BD
+     /**
+     * Salvar o ator no BD
      */
-    public void salvar(Cliente c){
+    public void salvar(Cliente c) {
+
+        //Pegando o gerenciador de acesso ao BD
+        EntityManager gerenciador = JPAUtil.getGerenciador();
+
+        //Iniciar a transação
+        gerenciador.getTransaction().begin();
+
+        //Mandar persistir o ator
+        gerenciador.persist(c);
+
+        //Commit
+        gerenciador.getTransaction().commit();
+
+    }
+
+    /**
+     * Retorna uma lista com todos os atores que estejam cadastrados no banco de
+     * dados
+     *
+     * @return
+     */
+    public List<Cliente> listar() {
+
+        //Pegando o gerenciador de acesso ao BD
+        EntityManager gerenciador = JPAUtil.getGerenciador();
+
+        //Criando a consulta ao BD
+        TypedQuery consulta = gerenciador.createQuery(
+                "Select a from Cliente c", Cliente.class);
+
+        //Retornar a lista de atores
+        return consulta.getResultList();
+
+    }
+
+    /**
+     * Salva as alterações no BD
+     */
+    public void editar( Cliente c) {
+
+        //Pegando o gerenciador de acesso ao BD
+        EntityManager gerenciador = JPAUtil.getGerenciador();
+        
+        //Iniciar a transação
+        gerenciador.getTransaction().begin();
+
+        //Mandar sincronizar as alterações 
+        gerenciador.merge(c);
+        
+        //Commit na transação
+        gerenciador.getTransaction().commit();
+
+    }
+    
+    /**
+     * Exclui o ator do BD
+     */
+    public void excluir(Cliente c){
         
         //Pegando o gerenciador de acesso ao BD
         EntityManager gerenciador = JPAUtil.getGerenciador();
@@ -19,23 +77,17 @@ public class ClienteDAO {
         //Iniciar a transação
         gerenciador.getTransaction().begin();
         
-        //Mandar persistir o cliente
-        gerenciador.persist(c);
+        //Para excluir tem que dar o merge primeiro para 
+        //sincronizar o ator do BD com o ator que foi
+        //selecionado na tela
+        c = gerenciador.merge(c);
+
+        //Mandar sincronizar as alterações 
+        gerenciador.remove(c);
         
-        //Commit
+        //Commit na transação
         gerenciador.getTransaction().commit();
         
     }
-    public List<Cliente> listar(){
-        
-      //Pegando o gerenciador de acesso ao BD
-      EntityManager gerenciador = JPAUtil.getGerenciador(); 
-      
-      //Criando a consulta ao BD
-      TypedQuery consulta = gerenciador.createQuery(
-              "Select a from Cliente a", Cliente.class);
-      
-      //Retornar a lista de cliente
-      return consulta.getResultList();
-}
+
 }

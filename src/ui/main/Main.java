@@ -7,10 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-/**
- *
- * @author lusst
- */
+
 public class Main extends Application {
     
     @Override
@@ -20,7 +17,7 @@ public class Main extends Application {
         Scene scene = new Scene(root);
         
         //Icone da janela
-        stage.getIcons().add(new Image("/ui/imagens/icone.png"));
+        stage.getIcons().add(new Image("/ui/Imagens/logo.jpg"));
         
         //Abrir maximizado
         stage.setMaximized(true);

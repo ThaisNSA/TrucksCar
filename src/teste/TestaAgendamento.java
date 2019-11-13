@@ -1,10 +1,10 @@
-package teste;
+/*package teste;
 
 import dados.entidades.Automovel;
 import javax.persistence.*;
 import util.JPAUtil;
 
-public class TestaAutomovel {
+public class TestaAgendamento {
     
     public static void main(String[] args) {
         
@@ -37,3 +37,4 @@ public class TestaAutomovel {
     }
     
 }
+*/

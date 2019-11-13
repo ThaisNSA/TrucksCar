@@ -5,8 +5,6 @@
     <!-- Implementação do JPA, no nosso caso Hibernate -->
     <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
     <!-- Aqui devem ser listadas todas as entidades criadas -->
-    <class>dados.entidades.Automovel</class>
-    <class>dados.entidades.Servicos</class>
     <class>dados.entidades.Cliente</class>
     <properties>
       <!-- Driver de Acesso ao BD -->

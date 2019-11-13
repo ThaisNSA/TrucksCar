@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ui.ClienteCadastrado;
+package ui.ClientesNãoCadastrados;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -14,7 +14,7 @@ import javafx.fxml.Initializable;
  *
  * @author Pandora(SSQ)
  */
-public class AgendamentoController implements Initializable {
+public class CadastrarClientesController implements Initializable {
 
     /**
      * Initializes the controller class.

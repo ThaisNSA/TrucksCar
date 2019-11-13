@@ -1,11 +1,11 @@
-package teste;
+/*package teste;
 
 import dados.entidades.Cliente;
 import dados.entidades.Automovel;
 import javax.persistence.EntityManager;
 import util.JPAUtil;
 
-public class BuscaAutomovelCliente {
+public class BuscaAgendamentoCliente {
     public static void main(String[] args) {
      
         //Pegando o gerenciador de acesso ao BD
@@ -27,3 +27,4 @@ public class BuscaAutomovelCliente {
         
     }
 }
+*/

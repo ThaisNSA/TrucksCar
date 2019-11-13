@@ -1,4 +1,4 @@
-package teste;
+/*package teste;
 
 import dados.entidades.Cliente;
 import dados.entidades.Automovel;
@@ -29,3 +29,4 @@ public class TestaRelacionamento3 {
         
     }
 }
+*/

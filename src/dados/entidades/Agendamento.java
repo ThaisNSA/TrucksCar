@@ -1,5 +1,6 @@
 package dados.entidades;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.Objects;
 import javax.persistence.Entity;
@@ -20,6 +21,33 @@ public class Agendamento {
     private Integer id_Agendamento;
     
     private LocalDateTime reserva;
+    private String porteDoAltomovel;
+    private String tipoDeLavagem;
+    private BigDecimal valor;
+
+    public String getPorteDoAltomovel() {
+        return porteDoAltomovel;
+    }
+
+    public void setPorteDoAltomovel(String PorteDoAltomovel) {
+        this.porteDoAltomovel = PorteDoAltomovel;
+    }
+
+    public String getTipoDeLavagem() {
+        return tipoDeLavagem;
+    }
+
+    public void setTipoDeLavagem(String tipoDeLavagem) {
+        this.tipoDeLavagem = tipoDeLavagem;
+    }
+
+    public BigDecimal getValor() {
+        return valor;
+    }
+
+    public void setValor(BigDecimal valor) {
+        this.valor = valor;
+    }
     
     @ManyToOne (optional = false)
     private Cliente cliente;

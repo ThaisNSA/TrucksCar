@@ -1,4 +1,4 @@
-package teste;
+/*package teste;
 
 import dados.entidades.Automovel;
 import dados.entidades.Servicos;
@@ -51,4 +51,4 @@ public class TesteRelacionamento1 {
         gerenciador.close();
         
     }  
-}
+}*/

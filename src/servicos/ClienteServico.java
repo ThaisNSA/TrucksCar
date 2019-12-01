@@ -15,10 +15,12 @@ public class ClienteServico {
         //Mandar o ator para a camada de dados
         //para ser salvo no banco de dados
         dao.salvar(c);
+        
     }
     
+    
     /**
-     * Solicita a camada DAO para buscar os atores
+     * Solicita a camada DAO para buscar os clientes
      * cadastrados
      * @return 
      */
@@ -32,7 +34,7 @@ public class ClienteServico {
     }
     
     /**
-     * Recebe um ator e manda para a camada DAO atualizar 
+     * Recebe um cliente e manda para a camada DAO atualizar 
      */
     public void editar(Cliente c){
         
@@ -45,14 +47,14 @@ public class ClienteServico {
     }
     
     /**
-     *  Recebe um ator para passar para a DAO excluir no BD
+     *  Recebe um cliente para passar para a DAO excluir no BD
      */
-    /*public void excluir(Ator a){
+    public void excluir(Cliente c){
         
         //Qualquer regra de negócio (se aplicável)
         
         //Mandar para a DAO excluir
-        dao.excluir(a);
-    }*/
+        dao.excluir(c);
+    }
     
 }

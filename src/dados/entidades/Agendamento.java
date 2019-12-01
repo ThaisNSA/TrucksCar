@@ -1,12 +1,17 @@
 package dados.entidades;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
 /**
@@ -20,17 +25,59 @@ public class Agendamento {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_Agendamento;
     
-    private LocalDateTime reserva;
-    private String porteDoAltomovel;
+    private LocalDate dataAgendamento;
+    private LocalTime horaAgendamento;
+    private String porteDoAutomovel;
     private String tipoDeLavagem;
     private BigDecimal valor;
 
-    public String getPorteDoAltomovel() {
-        return porteDoAltomovel;
+    public Set<Cliente> getClientes() {
+        return clientes;
     }
 
-    public void setPorteDoAltomovel(String PorteDoAltomovel) {
-        this.porteDoAltomovel = PorteDoAltomovel;
+    public void setClientes(Set<Cliente> clientes) {
+        this.clientes = clientes;
+    }
+    
+    @ManyToOne (optional = false)
+    private Cliente cliente;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    private Set<Cliente> clientes = new HashSet<Cliente>();
+    
+     //Construtor vazio da JPA (OBRIGATÓRIO)
+    public Agendamento(){}
+    
+    //Construtor
+    public Agendamento(Cliente c){
+        this.setCliente(c);
+    }
+
+    public Agendamento(String text, LocalDate value, LocalTime value0, BigDecimal bigDecimal) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    public String getPorteDoAutomovel() {
+        return porteDoAutomovel;
+    }
+
+    public LocalDate getDataAgendamento() {
+        return dataAgendamento;
+    }
+
+    public void setDataAgendamento(LocalDate dataAgendamento) {
+        this.dataAgendamento = dataAgendamento;
+    }
+
+    public LocalTime getHoraAgendamento() {
+        return horaAgendamento;
+    }
+
+    public void setHoraAgendamento(LocalTime horaAgendamento) {
+        this.horaAgendamento = horaAgendamento;
+    }
+
+    public void setPorteDoAutomovel(String PorteDoAltomovel) {
+        this.porteDoAutomovel = PorteDoAltomovel;
     }
 
     public String getTipoDeLavagem() {
@@ -49,8 +96,8 @@ public class Agendamento {
         this.valor = valor;
     }
     
-    @ManyToOne (optional = false)
-    private Cliente cliente;
+   
+    
 
     public Integer getId_Agendamento() {
         return id_Agendamento;
@@ -60,13 +107,6 @@ public class Agendamento {
         this.id_Agendamento = id_Agendamento;
     }
 
-    public LocalDateTime getReserva() {
-        return reserva;
-    }
-
-    public void setReserva(LocalDateTime reserva) {
-        this.reserva = reserva;
-    }
 
     public Cliente getCliente() {
         return cliente;
@@ -100,6 +140,5 @@ public class Agendamento {
         }
         return true;
     }
-    
     
 }

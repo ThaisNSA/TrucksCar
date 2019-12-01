@@ -6,8 +6,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="573.0" prefWidth="771.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="clientesNãoCadastrados.CadastrarClientesController">
+<AnchorPane id="AnchorPane" prefHeight="573.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.ClientesNaoCadastrados.CadastrarClientesController">
    <children>
       <Button layoutX="511.0" layoutY="293.0" mnemonicParsing="false" onAction="#salvar" text="Salvar" />
       <Button layoutX="598.0" layoutY="293.0" mnemonicParsing="false" onAction="#editar" text="Editar" />
@@ -20,10 +19,10 @@
             <TableColumn fx:id="C3CpfCnpj" prefWidth="128.0" text="CPF/CNPJ" />
             <TableColumn fx:id="C4Email" prefWidth="134.0" text="E-mail" />
             <TableColumn fx:id="C5Telefone" prefWidth="138.0" text="Telefone" />
-            <TableColumn fx:id="C6Endereco" prefWidth="141.0" text="Endereço" />
+            <TableColumn fx:id="C6Endereco" prefWidth="153.0" text="Endereço" />
         </columns>
       </TableView>
-      <JFXTextField fx:id="tfID" editable="false" labelFloat="true" layoutX="14.0" layoutY="26.0" prefHeight="26.0" prefWidth="66.0" promptText="ID" />
+      <JFXTextField fx:id="tfID" editable="false" labelFloat="true" layoutX="14.0" layoutY="26.0" prefHeight="26.0" prefWidth="62.0" promptText="ID" />
       <JFXTextField fx:id="tfNome" labelFloat="true" layoutX="14.0" layoutY="73.0" prefHeight="26.0" prefWidth="625.0" promptText="Nome" />
       <JFXTextField fx:id="tfTelefone" labelFloat="true" layoutX="14.0" layoutY="201.0" prefHeight="26.0" prefWidth="625.0" promptText="Telefone" />
       <JFXTextField fx:id="tfEmail" labelFloat="true" layoutX="14.0" layoutY="159.0" prefHeight="26.0" prefWidth="625.0" promptText="E-mail" />

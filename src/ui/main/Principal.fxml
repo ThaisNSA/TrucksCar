@@ -12,7 +12,7 @@
             <Image url="@../Imagens/logo.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="buttonAgendamento" layoutX="204.0" layoutY="150.0" mnemonicParsing="false" onAction="#abrirClienteCadastrado" prefHeight="25.0" prefWidth="193.0" text="Cliente Cadastrado" textAlignment="CENTER" />
-      <Button fx:id="buttonCadastro" layoutX="204.0" layoutY="221.0" mnemonicParsing="false" onAction="#abrilClienteNaoCadastrado" prefHeight="25.0" prefWidth="193.0" text="Cliente Não Cadastrado" />
+      <Button layoutX="204.0" layoutY="150.0" mnemonicParsing="false" onAction="#abrirClienteCadastrado" prefHeight="25.0" prefWidth="193.0" text="Cliente Cadastrado" textAlignment="CENTER" />
+      <Button layoutX="204.0" layoutY="221.0" mnemonicParsing="false" onAction="#abrilClienteNaoCadastrado" prefHeight="25.0" prefWidth="193.0" text="Cliente Não Cadastrado" />
    </children>
 </AnchorPane>

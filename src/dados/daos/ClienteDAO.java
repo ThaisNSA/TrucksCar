@@ -9,7 +9,7 @@ import util.JPAUtil;
 public class ClienteDAO {
     
      /**
-     * Salvar o ator no BD
+     * Salvar o cliente no BD
      */
     public void salvar(Cliente c) {
 
@@ -19,7 +19,7 @@ public class ClienteDAO {
         //Iniciar a transação
         gerenciador.getTransaction().begin();
 
-        //Mandar persistir o ator
+        //Mandar persistir o cliente
         gerenciador.persist(c);
 
         //Commit
@@ -40,7 +40,7 @@ public class ClienteDAO {
 
         //Criando a consulta ao BD
         TypedQuery consulta = gerenciador.createQuery(
-                "Select a from Cliente c", Cliente.class);
+                "Select c from Cliente c", Cliente.class);
 
         //Retornar a lista de atores
         return consulta.getResultList();
@@ -67,7 +67,7 @@ public class ClienteDAO {
     }
     
     /**
-     * Exclui o ator do BD
+     * Exclui o cliente do BD
      */
     public void excluir(Cliente c){
         

@@ -11,14 +11,14 @@ public class Cliente {
 
     private String nome;
     private String email;
-    private int telefone;
+    private String telefone;
     private String endereco;
             
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_cadastro;
-    private String cpf;
-    private String cnpj;
+    private String cpfCnpj;
+    
     
     //Construtor vazio da JPA (OBRIGATÓRIO)
     public Cliente(){}
@@ -44,22 +44,15 @@ public class Cliente {
         this.id_cadastro = id_cadastro;
     }
 
-    public String getCpf() {
-        return cpf;
+    public String getCpfCnpj() {
+        return cpfCnpj;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public void setCpfCnpj(String cpf) {
+        this.cpfCnpj = cpf;
     }
 
-    public String getCnpj() {
-        return cnpj;
-    }
-
-    public void setCnpj(String cnpj) {
-        this.cnpj = cnpj;
-    }
-
+   
     public String getEmail() {
         return email;
     }
@@ -68,11 +61,11 @@ public class Cliente {
         this.email = email;
     }
 
-    public int getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
 
-    public void setTelefone(int telefone) {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 

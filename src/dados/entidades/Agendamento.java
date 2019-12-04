@@ -42,7 +42,7 @@ public class Agendamento {
     @ManyToOne (optional = false)
     private Cliente cliente;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne
     private Set<Cliente> clientes = new HashSet<Cliente>();
     
      //Construtor vazio da JPA (OBRIGATÓRIO)
